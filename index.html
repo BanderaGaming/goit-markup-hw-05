@@ -25,7 +25,7 @@
         </a>
         <nav>
             <ul class="site-list">
-                <li><a class="site-links" href="index.html">Студія</a></li>
+                <li><a class="site-links current" href="index.html">Студія</a></li>
                 <li><a class="site-links" href="portfolio.html">Портфоліо</a></li>
                 <li><a class="site-links" href="">Контакти</a></li>
             </ul>
@@ -45,7 +45,7 @@
         <section class="hero main-sections-padding">
             <div class="container">
                 <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
-                <button class="hero-button" type="button">Замовити послугу</button>
+                <button data-modal-open class="hero-button" type="button">Замовити послугу</button>
             </div>
         </section>
 
@@ -95,10 +95,10 @@
             <section class="about main-sections-padding">
             <div class="container">
                 <h2 class="main-section-title">Чим ми займаємося</h2>
-            <ul class="about-imgs">
-                <li><img src="./images/work1.jpg" alt="робота-1" width="370" height="295"></li>
-                <li><img src="./images/work2.jpg" alt="робота-2" width="370" height="295"></li>
-                <li><img src="./images/work3.jpg" alt="робота-3" width="370" height="295"></li>
+            <ul class="about-list">
+                <li class="about-list-item"><img src="./images/work1.jpg" alt="робота-1" width="370" height="295"> <div class="about-disc-box"><p class="about-disc">Десктопні додатки</p></div></li>
+                <li class="about-list-item"><img src="./images/work2.jpg" alt="робота-2" width="370" height="295"> <div class="about-disc-box"><p class="about-disc">Мобільні додатки</p></div></li>
+                <li class="about-list-item"><img src="./images/work3.jpg" alt="робота-3" width="370" height="295"> <div class="about-disc-box"><p class="about-disc">Дизайнерські рішення</p></div></li>
             </ul>
             </div>
             </section>
@@ -247,6 +247,15 @@
         </div>
     </div>
     </footer>
+
+    <div data-modal class="backdrop">
+      <div class="modal">
+        <button data-modal-close class="close-btn" type="button" ><svg class="close-icon" width="30" height="30">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg></button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
