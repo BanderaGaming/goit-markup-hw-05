@@ -116,6 +116,9 @@ button {
   color: var(--site-nav-color);
   padding: 32px 0;
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-links.current {
@@ -130,7 +133,7 @@ button {
   background-color: var(--main-studio-color);
   border-radius: 2px;
   height: 4px;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .site-links:hover,
@@ -143,8 +146,6 @@ button {
 .contacts-up:focus,
 .contacts-up:hover .contact-icons,
 .contacts-up:focus .contact-icons {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--main-studio-color);
   fill: var(--main-studio-color);
 }
@@ -159,6 +160,9 @@ button {
 .contact-icons {
   margin-right: 10px;
   fill: var(--header-contact-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-up {
@@ -170,6 +174,9 @@ button {
   letter-spacing: 0.02em;
   color: var(--header-contact-color);
   padding: 32px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*MAIN STYLES*/
@@ -183,8 +190,11 @@ button {
     ),
     url(../images/hero-back.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position-x: center;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .hero-text {
@@ -206,7 +216,7 @@ button {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  background: var(--main-studio-color);
+  background-color: var(--main-studio-color);
   color: var(--main-text-color);
   border-radius: 4px;
   cursor: pointer;
@@ -219,13 +229,14 @@ button {
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--active-button-color);
+  background-color: var(--active-button-color);
 }
 
 .features {
@@ -343,6 +354,15 @@ button {
   justify-content: center;
   align-items: center;
   fill: var(--main-social-icons-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links-icons {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-icons:hover,
@@ -353,8 +373,6 @@ button {
 .social-links:focus,
 .follow-us-links:focus,
 .follow-us-links:hover {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--white-color);
   background-color: var(--main-studio-color);
 }
@@ -372,20 +390,24 @@ button {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-links:hover .clients-icons,
 .clients-links:focus .clients-icons,
 .clients-links:hover,
 .clients-links:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-color: var(--main-studio-color);
   fill: var(--main-studio-color);
 }
 
 .clients-icons {
   fill: var(--clients-icons-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*FOOTER*/
@@ -420,6 +442,9 @@ button {
   font-style: normal;
   color: var(--main-text-color);
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-bottom {
@@ -429,6 +454,9 @@ button {
   letter-spacing: 0.03em;
   color: var(--bottom-contact-color);
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .follow-us-title {
@@ -454,10 +482,16 @@ button {
   height: 44px;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .follow-us-icons {
   fill: var(--white-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*PORTFOLIO*/
@@ -479,17 +513,18 @@ button {
   font-size: 16px;
   line-height: calc(26 / 16);
   cursor: pointer;
-  background: var(--filter-option-color);
+  background-color: var(--filter-option-color);
   border-radius: 4px;
   font-family: "Roboto";
   padding: 6px 25px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 
 .filter-option:hover,
 .filter-option:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--main-studio-color);
+  background-color: var(--main-studio-color);
   color: var(--main-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -506,10 +541,14 @@ button {
   background: #ffffff;
 }
 
-.project-links:hover,
-.project-links:focus {
+.project-links {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+}
+
+.project-links:hover,
+.project-links:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -576,6 +615,7 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+  transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -588,10 +628,13 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition-property: transform, background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .close-btn {
